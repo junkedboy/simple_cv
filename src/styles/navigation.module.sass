@@ -1,0 +1,125 @@
+.main
+    max-height: 100vh
+    position: sticky
+    top: 0
+    background: gray
+    background-image: url('../assets/img/nav-background.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 20px 40px
+    color: white
+    display: flex
+    flex-direction: column
+    row-gap: 40px
+@media all and (max-width: 800px)
+    .main
+        background-attachment: fixed
+        padding: 0
+        row-gap: 0
+
+.head
+    text-align: center
+    &__name
+        font-size: 24px
+    &__photo
+        margin: 20px auto 10px
+        border-radius: 50%
+        width: 100%
+    &__degree
+    &__position
+.headMobile
+    display: none
+@media all and (max-width: 800px)
+    .head
+        display: none
+    .headMobile
+        margin: 10px
+        display: grid
+        grid-template-columns: 30% auto
+        column-gap: 10px
+        img
+            max-width: 100%
+            border-radius: 50%
+            height: 80px
+        &__textBox
+            display: flex
+            flex-direction: column
+            justify-content: center
+            row-gap: 5px
+        &__name
+            font-size: 20px
+        &__degree
+        &__position
+
+.navigation
+    display: flex
+    flex-direction: column
+    align-self: flex-end
+    text-align: right
+    text-transform: uppercase
+    white-space: nowrap
+    &__item
+        padding: 5px 0
+@media all and (max-width: 800px)
+    .navigation
+        align-self: stretch
+        text-align: center
+        // max-height: 40vh
+        a
+            display: flex
+            width: 100%
+            justify-content: center
+
+.menuToggle
+    display: none
+@media all and (max-width: 800px)
+    .menuToggle
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #000000a1
+        padding: 5px 10px 5px 10px
+        border-top: 1px solid #d6d6d6
+        border-bottom: 1px solid #d6d6d6
+        span
+            font-size: 18px
+            color: #d6d6d6
+
+.social
+    margin: auto auto 0 auto
+    font-size: 30px
+    display: flex
+    column-gap: 20px
+@media all and (max-width: 800px)
+    .social
+        display: none
+
+.selector
+    margin: auto 0
+    outline: none
+    background: #00000000
+    color: white
+    height: 20px
+    font-family: PFDinTextCondPro-Medium
+    letter-spacing: 0.8px
+    option
+        color: black
+        
+.active
+    background-image: url('../assets/img/content-background.jpg')
+    color: black
+    padding: 5px 40px 5px 10px
+    margin-right: -41px
+    font-weight: 700
+@media all and (max-width: 800px)
+    .active
+        margin-right: 0
+        display: flex
+        padding: 5px 10px
+        justify-content: center
+
+@media all and (max-width: 800px)
+    .disabled
+        display: none
+  
